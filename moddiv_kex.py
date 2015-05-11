@@ -1,4 +1,5 @@
 " https://eprint.iacr.org/2014/946.pdf "
+" pycrypto library is needed "
 
 import sys
 from Crypto.Util.number import getRandomNBitInteger
@@ -46,8 +47,8 @@ else :
 
    D1 = pow(2,m)
 
-   " In approximately 30 % percents, the keys computed by Alice and Bob are not identical "
-   " their difference is one, this is due to bit carry propagation, In order that public key "
+   " In approximately 30 % percents, the keys computed by Alice and Bob are not identical : "
+   " Wx = Wy +(-) 1, this is due to bit carry propagation, In order that public key "
    " algorithms presented in this paper function properly all the time, some least significant " 
    " bits of the two numbers to compare should be removed : replace the last instruction by the " 
    " following : "
@@ -103,9 +104,9 @@ else :
    " If the actual size of exchanged key is not equal to (p-q)-m , it is because some "
    " most significant bits of exchanged key are zeroes. "
 
-   print("p Size : %d " % p)
-   print("q Size : %d " % q)
-   print("m Size : %d " % m)
+   print("p = %d " % p)
+   print("q = %d " % q)
+   print("m = %d " % m)
    print("Secret Key Size (p-q)-m : %d " %Wx.bit_length())
 
    print("") 
