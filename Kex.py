@@ -50,9 +50,9 @@ else :
 
    D1 = pow(2,m + r)
 
-   " If r = 0,  In 30 \% percents, the keys computed by Alice and Bob are not identical : " 
-   " $W_a = W_b \pm 1$, this is due to bit carry propagation, if r is increased by one " 
-   " the probability that Wx is diffrent to Wy is devided by two.  " 
+   " If r = 0,  In 30 % percents, the keys computed by Alice and Bob are not identical : " 
+   " Wa = Wb + 1, this is due to bit carry propagation, if r is increased by one " 
+   " the probability that Wa is diffrent to Wb is devided by two.  " 
 
    U =  ModDiv(Z*X,M,D) 
 
